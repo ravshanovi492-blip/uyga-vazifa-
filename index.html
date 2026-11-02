@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IBROHIM CARS | Premium Auto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">IBROHIM<span>CARS</span></div>
+    <nav>
+        <a href="#home">Bosh sahifa</a>
+        <a href="#cars">Avtomobillar</a>
+        <a href="#about">Biz haqimizda</a>
+        <a href="#contact">Aloqa</a>
+    </nav>
+    <button class="cart-btn" onclick="showCart()">
+        🛒 Savat <span id="cartCount">0</span>
+    </button>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <p class="subtitle">PREMIUM AUTOMOBILE WORLD</p>
+        <h1>ORZUYINGDAGI<br><span>AVTOMOBIL</span></h1>
+        <p>Tezlik, hashamat va mukammallik bir joyda!</p>
+        <a href="#cars" class="main-btn">AVTOMOBILLARNI KO‘RISH →</a>
+    </div>
+    <div class="hero-bottom">
+        <span>01 / 04</span>
+        <span>IBROHIM CARS — DRIVE YOUR DREAM</span>
+    </div>
+</section>
+
+<section class="cars-section" id="cars">
+    <div class="section-heading">
+        <p class="subtitle">BIZNING KOLEKSIYAMIZ</p>
+        <h2>PREMIUM <span>AVTOMOBILLAR</span></h2>
+        <p>O‘zingizga yoqqan avtomobilni tanlang.</p>
+    </div>
+
+    <input type="text" id="search" placeholder="🔍 Avtomobil nomini qidiring...">
+
+    <div class="filters">
+        <button class="filter active" onclick="filterCars('all', this)">Barchasi</button>
+        <button class="filter" onclick="filterCars('BMW', this)">BMW</button>
+        <button class="filter" onclick="filterCars('Mercedes', this)">Mercedes</button>
+        <button class="filter" onclick="filterCars('Porsche', this)">Porsche</button>
+    </div>
+
+    <div class="cars-grid" id="carsGrid"></div>
+</section>
+
+<section class="about" id="about">
+    <div>
+        <p class="subtitle">BIZ HAQIMIZDA</p>
+        <h2>IBROHIM <span>CARS</span></h2>
+        <p>
+            Ibrohim Cars — zamonaviy va premium avtomobillar
+            olamiga xush kelibsiz! Bizning maqsadimiz sizga
+            orzuingizdagi avtomobilni tanlashda yordam berish.
+        </p>
+    </div>
+    <div class="stats">
+        <div><strong>50+</strong><p>Avtomobil modeli</p></div>
+        <div><strong>100%</strong><p>Sifat va ishonch</p></div>
+        <div><strong>24/7</strong><p>Onlayn xizmat</p></div>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <p class="subtitle">BIZ BILAN BOG‘LANING</p>
+    <h2>ALOQA <span>MA'LUMOTLARI</span></h2>
+    <p>📍 Toshkent shahri, Yakkasaroy tumani</p>
+    <p>📞 +998 90 123 45 67</p>
+    <p>✉️ ibrohimcars@gmail.com</p>
+    <a class="main-btn" href="https://www.google.com/maps/search/?api=1&query=Yakkasaray+Tashkent" target="_blank">LOKATSIYANI KO‘RISH</a>
+</section>
+
+<footer>
+    <h2>IBROHIM<span>CARS</span></h2>
+    <p>© 2026 Ibrohim Cars. Barcha huquqlar himoyalangan.</p>
+</footer>
+
+<div class="modal" id="cartModal">
+    <div class="modal-content">
+        <button class="close" onclick="closeCart()">✕</button>
+        <h2>🛒 SAVATINGIZ</h2>
+        <div id="cartItems"></div>
+        <h3 id="total">Jami: 0 $</h3>
+        <button class="main-btn" onclick="checkout()">Buyurtma berish</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
